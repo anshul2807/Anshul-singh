@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<title>HOME</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #E9E4E4;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("logo.png");
+  min-height: 60%;
+  width:500px ;
+  height:80px;
+  position: relative;
+  left: 455px;
+}
+
+.menu {
+  display: none;
+}
+#txttxt{
+  background-color: #F1F1F1
+}
+</style>
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txttxt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+<body onload="startTime()">
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">MOTIVE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">CONTENTS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">FEEDBACKS</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+   
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px"></span>
+  </div>
+  
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MOTIVE</span></h5>
+    <p>This website’s main motive is to help students as much as possible to make them learn the computer  language they are interested in.
+It will provide various video lectures,problem statements,Quizzes and much more.<br><br>
+This website will also provide an online compiler with multiple languages which would help the students run their programs more fluently and help them save  time and resource  from downloading multiple compilers for multiple programming languages.<br><br>It will also act as an IDE for those students who don’t own a personal computer or a laptop or those who cannot choose what’s the right IDE for them.</p>
+   
+    
+    
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTENTS</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">LANGUAGE PROFICIENCY</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">WORKSPACE(IDE)</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5><a href="p1.html" style="text-decoration: none;"><strong>C</strong></a></h5>
+      <p class="w3-text-grey">C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, while a static type system prevents unintended operations.</p><br>
+    
+      <h5><strong>C++</strong></h5>
+      <p class="w3-text-grey">C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes</p><br>
+    
+      <h5><strong>JAVA</strong></h5>
+      <p class="w3-text-grey">DescriptionJava is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible</p><br>
+    
+      <h5><STRONG>PYTHON</STRONG></h5>
+      <p class="w3-text-grey">Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.</p><br>
+    
+      <h5><strong>...AND WEB DEVELOPMENT</strong></h5>
+      <p class="w3-text-grey"></p>
+    </div>
+
+
+
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      
+
+
+        <div class="sec-widget" data-widget="80a5dd78e6d3f863fe09066136dbc59f"></div>
+
+   
+    
+
+            
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">FEEDBACKS</span></h5>
+   
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name" required=""></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="numbers" placeholder="Contact Number" required name="People" size="10" maxlength="10" required=""></p>
+     
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Feedbacks" required="" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by EduCat</p>
+</footer>
+<div id="txttxt">
+   
+  </div>
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+<script>
+SEC_HTTPS = true;
+SEC_BASE = "compilers.widgets.sphere-engine.com"; 
+(function(d, s, id){ SEC = window.SEC || (window.SEC = []);
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; 
+  js.src = (SEC_HTTPS ? "https" : "http") + "://" + SEC_BASE + "/static/sdk/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);   
+}(document, "script", "sphere-engine-compilers-jssdk"));
+</script>
+ 
+
+</body>
+</html>
+ 
+
+
